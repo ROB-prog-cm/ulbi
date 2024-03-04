@@ -1,5 +1,5 @@
 import {render} from "react-dom";
-import Cuonter from "./components/Cuonter";
+import App from "./App";
 
 
-render(<Cuonter/>, document.getElementById('root'))
+render(<App/>, document.getElementById('root'))
