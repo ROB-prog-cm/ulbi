@@ -1,18 +1,20 @@
 import React from 'react';
 import {useTheme} from "app/providers/ThemeProvider";
-import './styles/index.scss'
 import {cl} from "shared/lib/classNames/classNames";
 import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/Navbar";
-import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
+import './styles/index.scss'
+import {Sidebar} from "widgets/Sidebar";
 
 const App = () => {
     const {theme} = useTheme()
     return (
         <div className={cl('app', {}, [theme])}>
             <Navbar/>
-            <AppRouter/>
-            <ThemeSwitcher/>
+            <div className='content-page'>
+                <Sidebar/>
+                <AppRouter/>
+            </div>
         </div>
     );
 };
